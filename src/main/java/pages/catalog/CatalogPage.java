@@ -189,8 +189,6 @@ public class CatalogPage extends BasePage {
                 System.out.println("WARNING log found: " + entry.getMessage());
                 // Дополнительные действия при нахождении WARNING в логе
             }
-
         }
-
     }
 }
