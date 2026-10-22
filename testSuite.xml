@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--
+   Файл конфигурации тестов
+   Параметр TypeBrowser - тип запуска драйвера варианты:RemoteThread, Remote, Chrome, ChromeHeadless.
+-->
+<suite name="SmokeTests">
+    <parameter name="TypeBrowser" value="Chrome"/>
+    <test name="LiteCart">
+        <classes>
+
+            <!-- Тест авторизации -->
+            <class name="tests.ui.TestLogin">
+                <methods>
+                    <include name="testLogin"/>
+                </methods>
+            </class>
+
+            <!-- Тест меню -->
+            <class name="tests.ui.TestMenu">
+                <methods>
+                    <include name="testAdminPageMenu"/>
+                </methods>
+            </class>
+
+            <!-- Тест заголовков -->
+            <class name="tests.ui.TestHeading">
+                <methods>
+                    <include name="testCheckHeading"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
