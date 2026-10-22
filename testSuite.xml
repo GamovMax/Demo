@@ -30,6 +30,13 @@
                 </methods>
             </class>
 
+            <!-- Тест добавления нового товара -->
+            <class name="tests.ui.TestCatalogAdd">
+                <methods>
+                    <include name="testCatalogAdd"/>
+                </methods>
+            </class>
+
         </classes>
     </test>
 </suite>
