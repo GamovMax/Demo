@@ -19,12 +19,15 @@ public class AdminPage extends BasePage {
      */
     public AdminPage clickOnLinkWithTextInMenu(String linkText) {
         Allure.step("Кликнуть по ссылке с текстом '" + linkText + "' в меню админки", () -> driverChrome
-                .findElement(By.xpath("//a/span[text()='" + linkText + "']")).click());
+                .findElement(By.xpath("//a/span[text()='" + linkText + "']"))
+                .click());
         return this;
     }
 
     /**
      * Проверить наличие на странице заголовка первого уровня ('h1').
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
     public AdminPage checkFirstLevelHeader() {
         Allure.step("Проверить наличие на странице заголовка первого уровня ('h1')", () -> driverChrome
