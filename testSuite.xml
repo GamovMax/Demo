@@ -37,6 +37,13 @@
                 </methods>
             </class>
 
+            <!-- Тест добавления нового товара -->
+            <class name="tests.ui.TestCatalogStickers">
+                <methods>
+                    <include name="testCatalogStickers"/>
+                </methods>
+            </class>
+
         </classes>
     </test>
 </suite>
