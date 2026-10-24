@@ -40,7 +40,7 @@ public class SettingsExample {
     /**
      * Длительность неявного ожидания в секундах.
      */
-    public static final int IMPLICIT_WAIT = 4;
+    public static final int IMPLICIT_WAIT = 5;
     /**
      * Длительность явного ожидания в секундах.
      */
