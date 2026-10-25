@@ -3,7 +3,12 @@ package pages.catalog;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.logging.LogEntries;
+import org.openqa.selenium.logging.LogEntry;
+import org.openqa.selenium.logging.LogType;
 import pages.base.BasePage;
+
+import java.util.logging.Level;
 
 public class CatalogPage extends BasePage {
 
@@ -122,38 +127,117 @@ public class CatalogPage extends BasePage {
         Allure.step("Кликнуть на кнопку 'Save'", () -> driverChrome.findElement(catalogButtonSave).click());
     }
 
-    public CatalogPage clickFolderRubberDucksLink() {
-        driverChrome.findElement(catalogFolderRubberDucks).click();
+    /**
+     * Кликнуть на ссылку 'Rubber Ducks'.
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public CatalogPage clickOnFolderRubberDucksLink() {
+        Allure.step("Кликнуть на ссылку 'Rubber Ducks'", () -> driverChrome
+                .findElement(catalogFolderRubberDucks)
+                .click());
         return this;
     }
 
-    public CatalogPage returnToCatalog() {
-        driverChrome.navigate().back();
+    /**
+     * Вернуться на предыдущую страницу.
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public CatalogPage returnToPreviousPage() {
+        Allure.step("Вернуться на предыдущую страницу", () -> driverChrome.navigate().back());
         return this;
     }
 
-    public CatalogPage clickBlueDuckLink() {
-        driverChrome.findElement(catalogBlueDuckLink).click();
+    /**
+     * Кликнуть на ссылку 'Blue Duck'.
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public CatalogPage clickOnBlueDuckLink() {
+        Allure.step("Кликнуть на ссылку 'Blue Duck'", () -> driverChrome
+                .findElement(catalogBlueDuckLink)
+                .click());
         return this;
     }
 
-    public CatalogPage clickGreenDuckLink() {
-        driverChrome.findElement(catalogGreenDuckLink).click();
+    /**
+     * Кликнуть на ссылку 'Green Duck'.
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public CatalogPage clickOnGreenDuckLink() {
+        Allure.step("Кликнуть на ссылку 'Green Duck'", () -> driverChrome
+                .findElement(catalogGreenDuckLink)
+                .click());
         return this;
     }
 
-    public CatalogPage clickPurpleDuckLink() {
-        driverChrome.findElement(catalogPurpleDuckLink).click();
+    /**
+     * Кликнуть на ссылку 'Purple Duck'.
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public CatalogPage clickOnPurpleDuckLink() {
+        Allure.step("Кликнуть на ссылку 'Purple Duck'", () -> driverChrome
+                .findElement(catalogPurpleDuckLink)
+                .click());
         return this;
     }
 
-    public CatalogPage clickRedDuckLink() {
-        driverChrome.findElement(catalogRedDuckLink).click();
+    /**
+     * Кликнуть на ссылку 'Red Duck'.
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public CatalogPage clickOnRedDuckLink() {
+        Allure.step("Кликнуть на ссылку 'Red Duck'", () -> driverChrome
+                .findElement(catalogRedDuckLink)
+                .click());
         return this;
     }
 
-    public CatalogPage clickYellowDuckLink() {
-        driverChrome.findElement(catalogYellowDuckLink).click();
+    /**
+     * Кликнуть на ссылку 'Yellow Duck'.
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public CatalogPage clickOnYellowDuckLink() {
+        Allure.step("Кликнуть на ссылку 'Yellow Duck'", () -> driverChrome
+                .findElement(catalogYellowDuckLink)
+                .click());
         return this;
+    }
+
+    /**
+     * Получить и проверить логи браузера.
+     */
+    public void getAndCheckLogs() {
+        // Получить логи браузера определенного типа (например, LogType.BROWSER)
+        LogEntries logs = driverChrome.manage().logs().get(LogType.BROWSER);
+
+        // Проверить, что в логах отсутствуют сообщения указанного уровня (например, WARNING)
+        Allure.step("Получить и проверить логи браузера", () -> {
+            for (LogEntry entry : logs) {
+                if (entry.getLevel().toString().equals("DEBUG")) {
+                    System.out.println("В логе найдено сообщение, используемое для отладки: " + entry.getMessage());
+                } else if (entry.getLevel().toString().equals("INFO")) {
+                    System.out.println("В логе найдено информационное сообщение: " + entry.getMessage());
+                } else if (entry.getLevel().toString().equals("WARNING")) {
+                    System.out.println("Найдено предупреждение в логе: " + entry.getMessage());
+                    // Дополнительные действия при нахождении WARNING в логе
+                } else if (entry.getLevel().toString().equals("ERROR")) {
+                    System.out.println("В логе найдено сообщение об ошибке: " + entry.getMessage());
+                } else if (entry.getLevel().toString().equals("CRITICAL")) {
+                    System.out.println("В логе найдена критическая ошибка: " + entry.getMessage());
+                } else if (entry.getLevel().toString().equals("FATAL")) {
+                    System.out.println("В логе найдена критическая ошибка, которая приводит к аварийному завершению " +
+                            "работы программы: " + entry.getMessage());
+                } else if (entry.getLevel().equals(Level.SEVERE)) {
+                    System.out.println("Обнаружено сообщение уровня SEVERE в логе браузера: " + entry.getMessage());
+                    // Здесь можно добавить соответствующие действия в случае обнаружения сообщения заданного уровня
+                }
+            }
+        });
     }
 }

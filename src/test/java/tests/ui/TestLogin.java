@@ -8,7 +8,7 @@ import tests.base.BaseTest;
 import static constants.Settings.URL_LOGIN;
 
 public class TestLogin extends BaseTest {
-    @Test(description = "Авторизация")
+    @Test(description = "Проверить авторизацию")
     @Severity(SeverityLevel.BLOCKER)
     @Link(name = "TASK 1590622", url = "https://example.ru")
     @Link(name = "TestCase", url = "https://example.ru")

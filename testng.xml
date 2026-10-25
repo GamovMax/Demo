@@ -37,10 +37,17 @@
                 </methods>
             </class>
 
-            <!-- Тест добавления нового товара -->
+            <!-- Тест проверки стикеров в каталоге -->
             <class name="tests.ui.TestCatalogStickers">
                 <methods>
                     <include name="testCatalogStickers"/>
+                </methods>
+            </class>
+
+            <!-- Тест проверки логов -->
+            <class name="tests.ui.TestCatalogLogs">
+                <methods>
+                    <include name="testCatalogLogs"/>
                 </methods>
             </class>
 
