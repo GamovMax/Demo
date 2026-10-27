@@ -12,7 +12,7 @@ public class ClientPage extends BasePage {
     }
 
     private final By createAccount = By.cssSelector
-            ("form[name='login_form'] > table > tbody > tr:nth-child(5) > td > a");
+            ("form[name='login_form'] tr:nth-child(5)");
 
     /**
      * Проверить стикеры в каталоге.
@@ -25,7 +25,10 @@ public class ClientPage extends BasePage {
         });
     }
 
+    /**
+     * Кликнуть на кнопку 'Create account'.
+     */
     public void clickCreateAccount() {
-        driverChrome.findElement(createAccount).click();
+        Allure.step("Кликнуть на кнопку 'Create account'", () -> driverChrome.findElement(createAccount).click());
     }
 }
