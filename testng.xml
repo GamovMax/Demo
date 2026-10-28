@@ -51,6 +51,13 @@
                 </methods>
             </class>
 
+            <!-- Тест создания аккаунта -->
+            <class name="tests.ui.TestCreateAccount">
+                <methods>
+                    <include name="testCreateAccount"/>
+                </methods>
+            </class>
+
         </classes>
     </test>
 </suite>

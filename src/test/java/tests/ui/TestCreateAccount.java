@@ -1,7 +1,7 @@
 package tests.ui;
 
 
-import io.qameta.allure.Allure;
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import tests.base.BaseTest;
 
@@ -9,10 +9,12 @@ import static constants.Settings.URL_CLIENT;
 
 public class TestCreateAccount extends BaseTest {
 
-    @Test
+    @Test(description = "Создать аккаунт")
+    @Severity(SeverityLevel.CRITICAL)
+    @Link(name = "TASK 1590627", url = "https://example.ru")
+    @Link(name = "TestCase", url = "https://example.ru")
+    @TmsLink("166964")
     public void testCreateAccount() {
-        // TODO добавить к методам в третьем шаге докстринги и степы
-
         Allure.step("Шаг 1", () -> basePage.open(URL_CLIENT));
 
         Allure.step("Шаг 2", () -> clientPage.clickCreateAccount());
