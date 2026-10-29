@@ -16,10 +16,11 @@
                 </methods>
             </class>
 
-            <!-- Тест меню -->
+            <!-- Тесты меню -->
             <class name="tests.ui.TestMenu">
                 <methods>
                     <include name="testAdminPageMenu"/>
+                    <include name="testTranslateYandexMenu"/>
                 </methods>
             </class>
 
