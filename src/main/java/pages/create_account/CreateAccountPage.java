@@ -5,24 +5,25 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.base.BasePage;
 
+import static constants.Names.*;
+
 public class CreateAccountPage extends BasePage {
 
     public CreateAccountPage(WebDriver driverChrome) {
         super(driverChrome);
     }
 
-    // TODO вынести значения в класс констант 'Names'
-    private final By accountInputFirstName = By.cssSelector("input[name='firstname']");
-    private final By accountInputLastName = By.cssSelector("input[name='lastname']");
-    private final By accountInputAddress = By.cssSelector("input[name='address1']");
-    private final By accountInputPostcode = By.cssSelector("input[name='postcode']");
-    private final By accountInputCity = By.cssSelector("input[name='city']");
-    private final By accountInputEmail = By.cssSelector("input[name='email']");
-    private final By accountInputPhone = By.cssSelector("input[name='phone']");
-    private final By accountInputPassword = By.cssSelector("input[name='password']");
-    private final By buttonCreateAccount = By.cssSelector("button[name='create_account']");
-    private final By LoginButton = By.cssSelector("button[name='login']");
-    private final By accountInputConfirmedPassword = By.cssSelector("input[name='confirmed_password']");
+    private final By accountInputFirstName = By.cssSelector("input[name='" + FIRSTNAME + "']");
+    private final By accountInputLastName = By.cssSelector("input[name='" + LASTNAME + "']");
+    private final By accountInputAddress = By.cssSelector("input[name='" + ADDRESS1 + "']");
+    private final By accountInputPostcode = By.cssSelector("input[name='" + POSTCODE + "']");
+    private final By accountInputCity = By.cssSelector("input[name='" + CITY + "']");
+    private final By accountInputEmail = By.cssSelector("input[name='" + EMAIL + "']");
+    private final By accountInputPhone = By.cssSelector("input[name='" + PHONE + "']");
+    private final By accountInputPassword = By.cssSelector("input[name='" + PASSWORD + "']");
+    private final By buttonCreateAccount = By.cssSelector("input[name='" + CREATE_ACCOUNT + "']");
+    private final By LoginButton = By.cssSelector("input[name='" + LOGIN + "']");
+    private final By accountInputConfirmedPassword = By.cssSelector("input[name='" + CONFIRMED_PASSWORD + "']");
 
     private final By accountInputCountry = By.className("select2-search__field");
     private final By selectResultsOptionHighlighted = By.className("select2-results__option--highlighted");
