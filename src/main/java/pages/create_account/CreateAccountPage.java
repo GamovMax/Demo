@@ -38,7 +38,12 @@ public class CreateAccountPage extends BasePage {
      * @param random        если true, то к тексту будет добавляться случайное число
      * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
-    public CreateAccountPage inputInElementWithAttributeName(String attributeName, String text, boolean random, boolean email) {
+    public CreateAccountPage inputInElementWithAttributeName(
+            String attributeName,
+            String text,
+            boolean random,
+            boolean email
+    ) {
         Allure.step("Ввести текст (" + text + ") без/со случайным числом в элемент с атрибутом name = " +
                 attributeName, () -> {
             driverChrome.findElement(By.name(attributeName)).click();
