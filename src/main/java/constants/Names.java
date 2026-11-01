@@ -4,9 +4,9 @@ package constants;
  * Константы атрибутов 'names'.
  */
 public class Names {
-    public static final String FIRSTNAME = "firstname";
-    public static final String LASTNAME = "lastname";
-    public static final String ADDRESS1 = "address1";
+    public static final String FIRST_NAME = "firstname";
+    public static final String LAST_NAME = "lastname";
+    public static final String ADDRESS_1 = "address1";
     public static final String POSTCODE = "postcode";
     public static final String CITY = "city";
     public static final String EMAIL = "email";
