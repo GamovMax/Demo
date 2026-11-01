@@ -1,11 +1,11 @@
 package pages.create_account;
 
+import constants.Names;
+import constants.TestInputs;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.base.BasePage;
-
-import static constants.Names.*;
 
 public class CreateAccountPage extends BasePage {
 
@@ -13,17 +13,17 @@ public class CreateAccountPage extends BasePage {
         super(driverChrome);
     }
 
-    private final By accountInputFirstName = By.cssSelector("input[name='" + FIRSTNAME + "']");
-    private final By accountInputLastName = By.cssSelector("input[name='" + LASTNAME + "']");
-    private final By accountInputAddress = By.cssSelector("input[name='" + ADDRESS1 + "']");
-    private final By accountInputPostcode = By.cssSelector("input[name='" + POSTCODE + "']");
-    private final By accountInputCity = By.cssSelector("input[name='" + CITY + "']");
-    private final By accountInputEmail = By.cssSelector("input[name='" + EMAIL + "']");
-    private final By accountInputPhone = By.cssSelector("input[name='" + PHONE + "']");
-    private final By accountInputPassword = By.cssSelector("input[name='" + PASSWORD + "']");
-    private final By buttonCreateAccount = By.cssSelector("input[name='" + CREATE_ACCOUNT + "']");
-    private final By LoginButton = By.cssSelector("input[name='" + LOGIN + "']");
-    private final By accountInputConfirmedPassword = By.cssSelector("input[name='" + CONFIRMED_PASSWORD + "']");
+    private final By accountInputFirstName = By.cssSelector("[name='" + Names.FIRSTNAME + "']");
+    private final By accountInputLastName = By.cssSelector("[name='" + Names.LASTNAME + "']");
+    private final By accountInputAddress = By.cssSelector("[name='" + Names.ADDRESS1 + "']");
+    private final By accountInputPostcode = By.cssSelector("[name='" + Names.POSTCODE + "']");
+    private final By accountInputCity = By.cssSelector("[name='" + Names.CITY + "']");
+    private final By accountInputEmail = By.cssSelector("[name='" + Names.EMAIL + "']");
+    private final By accountInputPhone = By.cssSelector("[name='" + Names.PHONE + "']");
+    private final By accountInputPassword = By.cssSelector("[name='" + Names.PASSWORD + "']");
+    private final By buttonCreateAccount = By.cssSelector("[name='" + Names.CREATE_ACCOUNT + "']");
+    private final By LoginButton = By.cssSelector("[name='" + Names.LOGIN + "']");
+    private final By accountInputConfirmedPassword = By.cssSelector("[name='" + Names.CONFIRMED_PASSWORD + "']");
 
     private final By accountInputCountry = By.className("select2-search__field");
     private final By selectResultsOptionHighlighted = By.className("select2-results__option--highlighted");
@@ -31,12 +31,12 @@ public class CreateAccountPage extends BasePage {
     private final By LogoutLink = By.cssSelector("div ul.list-vertical li:nth-child(4) a");
 
     // TODO вынести значения в класс констант 'TestInputs'
-    private final String email = randomNumber + "@gmail.com";
-    private final String firstName = "First Name " + randomNumber;
-    private final String lastName = "Last Name " + randomNumber;
-    private final String address = "Address " + randomNumber;
-    private final String city = "City " + randomNumber;
-    private final String password = "P@$$w0rd" + randomNumber;
+    private final String email = randomNumber + TestInputs.GMAIL_COM;
+    private final String firstName = TestInputs.FIRST_NAME + randomNumber;
+    private final String lastName = TestInputs.LAST_NAME + randomNumber;
+    private final String address = TestInputs.ADDRESS + randomNumber;
+    private final String city = TestInputs.CITY + randomNumber;
+    private final String password = TestInputs.PASSWORD + randomNumber;
 
     /**
      * Ввести текст в input 'First Name'.
