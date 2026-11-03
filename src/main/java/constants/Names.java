@@ -15,4 +15,5 @@ public class Names {
     public static final String CREATE_ACCOUNT = "create_account";
     public static final String LOGIN = "login";
     public static final String CONFIRMED_PASSWORD = "confirmed_password";
+    public static final String USERNAME = "username";
 }

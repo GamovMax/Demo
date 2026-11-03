@@ -21,22 +21,26 @@ public class TestCreateAccount extends BaseTest {
 
         Allure.step("Шаг 2", () -> clientPage.clickCreateAccount());
 
-        Allure.step("Шаг 3", () -> createAccountPage
-                .inputInElementWithAttributeName(Names.FIRST_NAME, TestInputs.FIRST_NAME, true, false)
-                .inputInElementWithAttributeName(Names.LAST_NAME, TestInputs.LAST_NAME, true, false)
-                .inputInElementWithAttributeName(Names.ADDRESS_1, TestInputs.ADDRESS, true, false)
-                .inputInElementWithAttributeName(Names.POSTCODE, TestInputs.POSTCODE, false, false)
-                .inputInElementWithAttributeName(Names.CITY, TestInputs.CITY, true, false)
-                .inputCountry()
-                .inputInElementWithAttributeName(Names.EMAIL, TestInputs.GMAIL_COM, true, true)
-                .inputInElementWithAttributeName(Names.PHONE, TestInputs.PHONE, false, false)
-                .inputInElementWithAttributeName(Names.PASSWORD, TestInputs.PASSWORD, true, false)
-                .inputInElementWithAttributeName(Names.CONFIRMED_PASSWORD, TestInputs.PASSWORD, true, false)
-                .clickOnElementWithAttributeName(Names.CREATE_ACCOUNT)
-                .clickLogoutLink()
-                .inputInElementWithAttributeName(Names.EMAIL, TestInputs.GMAIL_COM, true, true)
-                .inputInElementWithAttributeName(Names.PASSWORD, TestInputs.PASSWORD, true, false)
-                .clickOnElementWithAttributeName(Names.LOGIN)
-                .clickLogoutLink());
+        Allure.step("Шаг 3", () -> {
+                createAccountPage
+                        .inputInElementWithAttributeName(Names.FIRST_NAME, TestInputs.FIRST_NAME, true, false)
+                    .inputInElementWithAttributeName(Names.LAST_NAME, TestInputs.LAST_NAME, true, false)
+                    .inputInElementWithAttributeName(Names.ADDRESS_1, TestInputs.ADDRESS, true, false)
+                    .inputInElementWithAttributeName(Names.POSTCODE, TestInputs.POSTCODE, false, false)
+                    .inputInElementWithAttributeName(Names.CITY, TestInputs.CITY, true, false)
+                    .inputCountry()
+                    .inputInElementWithAttributeName(Names.EMAIL, TestInputs.GMAIL_COM, true, true)
+                    .inputInElementWithAttributeName(Names.PHONE, TestInputs.PHONE, false, false)
+                    .inputInElementWithAttributeName(Names.PASSWORD, TestInputs.PASSWORD, true, false)
+                    .inputInElementWithAttributeName(Names.CONFIRMED_PASSWORD, TestInputs.PASSWORD, true, false)
+                    .clickOnElementWithAttributeName(Names.CREATE_ACCOUNT);
+
+                createAccountPage
+                        .clickLogoutLink()
+                        .inputInElementWithAttributeName(Names.EMAIL, TestInputs.GMAIL_COM, true, true)
+                        .inputInElementWithAttributeName(Names.PASSWORD, TestInputs.PASSWORD, true, false)
+                        .clickOnElementWithAttributeName(Names.LOGIN);
+
+                createAccountPage.clickLogoutLink();});
     }
 }

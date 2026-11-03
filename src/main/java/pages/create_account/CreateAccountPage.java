@@ -17,19 +17,6 @@ public class CreateAccountPage extends BasePage {
     private final By LogoutLink = By.cssSelector("div ul.list-vertical li:nth-child(4) a");
 
     /**
-     * Кликнуть на элемент с атрибутом 'name'.
-     *
-     * @param AttributeName атрибут 'name'
-     * @return текущий объект страницы 'this' (для цепочки вызовов)
-     */
-    public CreateAccountPage clickOnElementWithAttributeName(String AttributeName) {
-        Allure.step("Кликнуть на элемент с атрибутом name = " + AttributeName, () -> driverChrome
-                .findElement(By.name(AttributeName))
-                .click());
-        return this;
-    }
-
-    /**
      * Ввести текст в элемент с атрибутом 'name'.
      *
      * @param attributeName атрибут 'name'
