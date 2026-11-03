@@ -1,5 +1,6 @@
 package pages.catalog;
 
+import constants.Names;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,10 +21,7 @@ public class CatalogPage extends BasePage {
     private final By catalogRadiobuttonStatusEnabled = By.cssSelector("input[data-type='toggle'][value='1']");
     private final By catalogInputName = By.cssSelector("input[name='name[en]']");
     private final By catalogMenuInformation = By.linkText("Information");
-    private final By catalogInputKeywords = By.name("keywords");
     private final By catalogMenuPrices = By.linkText("Prices");
-    private final By catalogInputPriceInclTaxUsd = By.name("gross_prices[USD]");
-    private final By catalogButtonSave = By.name("save");
     private final By catalogFolderRubberDucks = By.xpath("//a[contains(text(), 'Rubber Ducks')]");
     private final By catalogBlueDuckLink = By.linkText("Blue Duck");
     private final By catalogGreenDuckLink = By.linkText("Green Duck");
@@ -89,42 +87,18 @@ public class CatalogPage extends BasePage {
      */
     public CatalogPage typeKeyword() {
         Allure.step("Ввести рандомное значение в поле 'Keyword'", () -> {
-            driverChrome.findElement(catalogInputKeywords).click();
-            driverChrome.findElement(catalogInputKeywords).sendKeys(name);
+            inputInElementWithAttributeName(Names.KEYWORDS, name);
         });
         return this;
     }
 
     /**
      * Кликнуть на вкладку меню 'Prices'.
-     *
-     * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
-    public CatalogPage clickOnMenuPrices() {
+    public void clickOnMenuPrices() {
         Allure.step("Кликнуть на вкладку меню 'Prices'", () -> driverChrome
                 .findElement(catalogMenuPrices)
                 .click());
-        return this;
-    }
-
-    /**
-     * Ввести цену.
-     *
-     * @return текущий объект страницы 'this' (для цепочки вызовов)
-     */
-    public CatalogPage typeUsd() {
-        Allure.step("Ввести цену", () -> {
-            driverChrome.findElement(catalogInputPriceInclTaxUsd).click();
-            driverChrome.findElement(catalogInputPriceInclTaxUsd).sendKeys("1");
-        });
-        return this;
-    }
-
-    /**
-     * Кликнуть на кнопку 'Save'.
-     */
-    public void clickOnButtonSave() {
-        Allure.step("Кликнуть на кнопку 'Save'", () -> driverChrome.findElement(catalogButtonSave).click());
     }
 
     /**

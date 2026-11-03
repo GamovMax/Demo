@@ -1,5 +1,6 @@
 package tests.ui;
 
+import constants.Names;
 import constants.UITextElements;
 import io.qameta.allure.*;
 import org.testng.annotations.Test;
@@ -24,14 +25,18 @@ public class TestCatalogAdd extends BaseTest {
                 .clickOnLinkWithTextInMenu(UITextElements.APPEARENCE)
                 .clickOnLinkWithTextInMenu(UITextElements.CATALOG));
 
-        Allure.step("Шаг 4", () -> catalogPage
-                .clickOnButtonAddNewProduct()
-                .clickOnRadiobuttonStatusEnabled()
-                .typeRandomName()
-                .clickOnMenuInformation()
-                .typeKeyword()
-                .clickOnMenuPrices()
-                .typeUsd()
-                .clickOnButtonSave());
+        Allure.step("Шаг 4", () -> {
+            catalogPage
+                    .clickOnButtonAddNewProduct()
+                    .clickOnRadiobuttonStatusEnabled()
+                    .typeRandomName()
+                    .clickOnMenuInformation()
+                    .typeKeyword()
+                    .clickOnMenuPrices();
+
+            catalogPage
+                    .inputInElementWithAttributeName(Names.GROSS_PRICES_USD, "1")
+                    .clickOnElementWithAttributeName(Names.SAVE);
+        });
     }
 }

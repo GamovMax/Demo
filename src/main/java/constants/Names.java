@@ -16,4 +16,7 @@ public class Names {
     public static final String LOGIN = "login";
     public static final String CONFIRMED_PASSWORD = "confirmed_password";
     public static final String USERNAME = "username";
+    public static final String KEYWORDS = "keywords";
+    public static final String GROSS_PRICES_USD = "gross_prices[USD]";
+    public static final String SAVE = "save";
 }

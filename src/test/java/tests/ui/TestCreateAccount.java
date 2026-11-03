@@ -22,8 +22,8 @@ public class TestCreateAccount extends BaseTest {
         Allure.step("Шаг 2", () -> clientPage.clickCreateAccount());
 
         Allure.step("Шаг 3", () -> {
-                createAccountPage
-                        .inputInElementWithAttributeName(Names.FIRST_NAME, TestInputs.FIRST_NAME, true, false)
+            createAccountPage
+                    .inputInElementWithAttributeName(Names.FIRST_NAME, TestInputs.FIRST_NAME, true, false)
                     .inputInElementWithAttributeName(Names.LAST_NAME, TestInputs.LAST_NAME, true, false)
                     .inputInElementWithAttributeName(Names.ADDRESS_1, TestInputs.ADDRESS, true, false)
                     .inputInElementWithAttributeName(Names.POSTCODE, TestInputs.POSTCODE, false, false)
@@ -35,12 +35,13 @@ public class TestCreateAccount extends BaseTest {
                     .inputInElementWithAttributeName(Names.CONFIRMED_PASSWORD, TestInputs.PASSWORD, true, false)
                     .clickOnElementWithAttributeName(Names.CREATE_ACCOUNT);
 
-                createAccountPage
-                        .clickLogoutLink()
-                        .inputInElementWithAttributeName(Names.EMAIL, TestInputs.GMAIL_COM, true, true)
-                        .inputInElementWithAttributeName(Names.PASSWORD, TestInputs.PASSWORD, true, false)
-                        .clickOnElementWithAttributeName(Names.LOGIN);
+            createAccountPage
+                    .clickLogoutLink()
+                    .inputInElementWithAttributeName(Names.EMAIL, TestInputs.GMAIL_COM, true, true)
+                    .inputInElementWithAttributeName(Names.PASSWORD, TestInputs.PASSWORD, true, false)
+                    .clickOnElementWithAttributeName(Names.LOGIN);
 
-                createAccountPage.clickLogoutLink();});
+            createAccountPage.clickLogoutLink();
+        });
     }
 }

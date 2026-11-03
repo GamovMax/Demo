@@ -34,13 +34,11 @@ public class BasePage {
      * Кликнуть на элемент с атрибутом 'name'.
      *
      * @param AttributeName атрибут 'name'
-     * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
-    public BasePage clickOnElementWithAttributeName(String AttributeName) {
+    public void clickOnElementWithAttributeName(String AttributeName) {
         Allure.step("Кликнуть на элемент с атрибутом name = " + AttributeName, () -> driverChrome
                 .findElement(By.name(AttributeName))
                 .click());
-        return this;
     }
 
     /**
@@ -53,7 +51,7 @@ public class BasePage {
     public BasePage inputInElementWithAttributeName(String attributeName, String text) {
         Allure.step("Ввести текст (" + text + ") в элемент с атрибутом name = " +
                 attributeName, () -> {
-            driverChrome.findElement(By.name(attributeName)).click();
+            clickOnElementWithAttributeName(attributeName);
             driverChrome.findElement(By.name(attributeName)).sendKeys(text);
         });
         return this;
