@@ -21,7 +21,7 @@ public class CatalogPage extends BasePage {
     private final By catalogInputName = By.cssSelector("input[name='name[en]']");
     private final By catalogMenuInformation = By.linkText("Information");
     private final By catalogMenuPrices = By.linkText("Prices");
-    private final By catalogFolderRubberDucks = By.xpath("//a[contains(text(), 'Rubber Ducks')]");
+    private final By catalogFolderRubberDucks = By.linkText("Rubber Ducks");
     private final By catalogBlueDuckLink = By.linkText("Blue Duck");
     private final By catalogGreenDuckLink = By.linkText("Green Duck");
     private final By catalogPurpleDuckLink = By.linkText("Purple Duck");
