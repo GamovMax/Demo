@@ -1,10 +1,9 @@
-package pages.login;
+package pages;
 
 import constants.Names;
 import constants.Settings;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.WebDriver;
-import pages.base.BasePage;
 
 public class LoginPage extends BasePage {
 

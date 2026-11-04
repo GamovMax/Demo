@@ -1,4 +1,4 @@
-package pages.base;
+package pages;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;

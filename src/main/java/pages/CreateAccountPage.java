@@ -1,9 +1,8 @@
-package pages.create_account;
+package pages;
 
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import pages.base.BasePage;
 
 public class CreateAccountPage extends BasePage {
 

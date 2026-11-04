@@ -1,4 +1,4 @@
-package pages.catalog;
+package pages;
 
 import constants.Names;
 import io.qameta.allure.Allure;
@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
-import pages.base.BasePage;
 
 import java.util.logging.Level;
 
