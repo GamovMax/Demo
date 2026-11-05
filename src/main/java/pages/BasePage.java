@@ -22,6 +22,29 @@ public class BasePage {
     }
 
     /**
+     * Вернуться на предыдущую страницу.
+     *
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public BasePage returnToPreviousPage() {
+        Allure.step("Вернуться на предыдущую страницу", () -> driverChrome.navigate().back());
+        return this;
+    }
+
+    /**
+     * Кликнуть на ссылку с текстом.
+     *
+     * @param linkText текст ссылки
+     * @return текущий объект страницы 'this' (для цепочки вызовов)
+     */
+    public BasePage clickOnLinkWithText(String linkText) {
+        Allure.step("Кликнуть на ссылку с текстом '" + linkText + "'", () -> driverChrome
+                .findElement(By.linkText(linkText))
+                .click());
+        return this;
+    }
+
+    /**
      * Открыть необходимую страницу по её URL.
      *
      * @param url url открываемой страницы
@@ -33,11 +56,11 @@ public class BasePage {
     /**
      * Кликнуть на элемент с атрибутом 'name'.
      *
-     * @param AttributeName атрибут 'name'
+     * @param attributeName атрибут 'name'
      */
-    public void clickOnElementWithAttributeName(String AttributeName) {
-        Allure.step("Кликнуть на элемент с атрибутом name = " + AttributeName, () -> driverChrome
-                .findElement(By.name(AttributeName))
+    public void clickOnElementWithAttributeName(String attributeName) {
+        Allure.step("Кликнуть на элемент с атрибутом name = " + attributeName, () -> driverChrome
+                .findElement(By.name(attributeName))
                 .click());
     }
 
@@ -49,7 +72,7 @@ public class BasePage {
      * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
     public BasePage inputInElementWithAttributeName(String attributeName, String text) {
-        Allure.step("Ввести текст (" + text + ") в элемент с атрибутом name = " +
+        Allure.step("Ввести текст '" + text + "' в элемент с атрибутом name = " +
                 attributeName, () -> {
             clickOnElementWithAttributeName(attributeName);
             driverChrome.findElement(By.name(attributeName)).sendKeys(text);

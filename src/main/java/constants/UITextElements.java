@@ -50,4 +50,13 @@ public class UITextElements {
     public static final String SECURITY = "Security";
     public static final String TAX_RATES = "Tax Rates";
     public static final String SCAN_FILES = "Scan Files";
+    public static final String ADD_NEW_PRODUCT = "Add New Product";
+    public static final String INFORMATION = "Information";
+    public static final String PRICES = "Prices";
+    public static final String RUBBER_DUCKS = "Rubber Ducks";
+    public static final String BLUE_DUCK = "Blue Duck";
+    public static final String GREEN_DUCK = "Green Duck";
+    public static final String PURPLE_DUCK = "Purple Duck";
+    public static final String RED_DUCK = "Red Duck";
+    public static final String YELLOW_DUCK = "Yellow Duck";
 }

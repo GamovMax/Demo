@@ -30,7 +30,7 @@ public class CreateAccountPage extends BasePage {
             boolean random,
             boolean email
     ) {
-        Allure.step("Ввести текст (" + text + ") без/со случайным числом в элемент с атрибутом name = " +
+        Allure.step("Ввести текст '" + text + "' без/со случайным числом в элемент с атрибутом name = " +
                 attributeName, () -> {
             driverChrome.findElement(By.name(attributeName)).click();
 

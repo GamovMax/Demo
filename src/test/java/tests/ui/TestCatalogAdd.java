@@ -25,18 +25,19 @@ public class TestCatalogAdd extends BaseTest {
                 .clickOnLinkWithTextInMenu(UITextElements.APPEARENCE)
                 .clickOnLinkWithTextInMenu(UITextElements.CATALOG));
 
-        Allure.step("Шаг 4", () -> {
-            catalogPage
-                    .clickOnButtonAddNewProduct()
-                    .clickOnRadiobuttonStatusEnabled()
-                    .typeRandomName()
-                    .clickOnMenuInformation()
-                    .typeKeyword()
-                    .clickOnMenuPrices();
+        Allure.step("Шаг 4", () -> catalogPage.clickOnLinkWithText(UITextElements.ADD_NEW_PRODUCT));
 
-            catalogPage
-                    .inputInElementWithAttributeName(Names.GROSS_PRICES_USD, "1")
-                    .clickOnElementWithAttributeName(Names.SAVE);
-        });
+        Allure.step("Шаг 5", () -> catalogPage
+                .clickOnRadiobuttonStatusEnabled()
+                .typeRandomName()
+                .clickOnLinkWithText(UITextElements.INFORMATION));
+
+        Allure.step("Шаг 6", () -> catalogPage
+                .typeKeyword()
+                .clickOnLinkWithText(UITextElements.PRICES));
+
+        Allure.step("Шаг 7", () -> catalogPage
+                .inputInElementWithAttributeName(Names.GROSS_PRICES_USD, "1")
+                .clickOnElementWithAttributeName(Names.SAVE));
     }
 }

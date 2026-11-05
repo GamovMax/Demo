@@ -25,17 +25,18 @@ public class TestCatalogLogs extends BaseTest {
                 .clickOnLinkWithTextInMenu(UITextElements.CATALOG));
 
         Allure.step("Шаг 4", () -> catalogPage
-                .clickOnFolderRubberDucksLink()
-                .clickOnBlueDuckLink()
+                .clickOnLinkWithText(UITextElements.RUBBER_DUCKS)
+                .clickOnLinkWithText(UITextElements.BLUE_DUCK)
                 .returnToPreviousPage()
-                .clickOnGreenDuckLink()
+                .clickOnLinkWithText(UITextElements.GREEN_DUCK)
                 .returnToPreviousPage()
-                .clickOnPurpleDuckLink()
+                .clickOnLinkWithText(UITextElements.PURPLE_DUCK)
                 .returnToPreviousPage()
-                .clickOnRedDuckLink()
+                .clickOnLinkWithText(UITextElements.RED_DUCK)
                 .returnToPreviousPage()
-                .clickOnYellowDuckLink()
-                .returnToPreviousPage()
-                .getAndCheckLogs());
+                .clickOnLinkWithText(UITextElements.YELLOW_DUCK)
+                .returnToPreviousPage());
+
+        Allure.step("Шаг 5", () -> catalogPage.getAndCheckLogs());
     }
 }
