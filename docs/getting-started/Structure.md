@@ -19,5 +19,5 @@
 
 ---
 
-- [Назад (Подготовка к запуску тестов)](preparing_to_run_tests.md)
-- [Далее (Запуск тестов)](running_tests.md)
+- [Назад (Подготовка к запуску тестов)](PreparingToRunTests.md)
+- [Далее (Запуск тестов)](RunningTests.md)

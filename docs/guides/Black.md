@@ -16,5 +16,5 @@ black .
 
 ---
 
-- [Назад (Allure)](allure.md)
-- [Далее (Линтер flake8)](flake8.md)
+- [Назад (Allure)](Allure.md)
+- [Далее (Линтер flake8)](Flake8.md)

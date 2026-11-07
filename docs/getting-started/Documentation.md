@@ -8,5 +8,5 @@
 
 ---
 
-- [Назад (Pre-commit)](pre_commit.md)
-- [Далее (Написание теста)](writing_tests.md)
+- [Назад (Pre-commit)](PreCommit.md)
+- [Далее (Написание теста)](WritingTests.md)

@@ -53,5 +53,5 @@ docker run --rm -e NUM_GW=3 rw_build_01
 
 ---
 
-- [Назад (Соглашения)](../getting_started/agreements.md)
-- [Далее (Установка Git)](git.md)
+- [Назад (Соглашения)](../getting-started/Agreements.md)
+- [Далее (Установка Git)](Git.md)

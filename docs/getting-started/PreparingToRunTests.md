@@ -15,5 +15,5 @@ playwright install webkit
 
 ---
 
-- [Назад (Настройка окружения)](environment.md)
-- [Далее (Структура проекта)](structure.md)
+- [Назад (Настройка окружения)](Environment.md)
+- [Далее (Структура проекта)](Structure.md)

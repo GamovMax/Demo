@@ -13,5 +13,5 @@
 
 ---
 
-- [Назад (Написание теста)](writing_tests.md)
-- [Далее (Соглашения)](../getting_started/agreements.md)
+- [Назад (Написание теста)](WritingTests.md)
+- [Далее (Соглашения)](Agreements.md)

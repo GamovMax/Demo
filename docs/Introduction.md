@@ -9,4 +9,4 @@
 ---
 
 - [Назад (README.md)](../README.md)
-- [Далее (Загрузка проекта)](getting_started/download_project.md)
+- [Далее (Загрузка проекта)](getting-started/DownloadProject.md)

@@ -11,5 +11,5 @@
 
 ---
 
-- [Назад (Введение)](../introduction.md)
-- [Далее (settings.py)](settings_py.md)
+- [Назад (Введение)](../Introduction.md)
+- [Далее (Settings.java)](SettingsJava.md)

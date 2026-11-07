@@ -22,7 +22,7 @@ pytest tests/default/test_another_example.py
 
 Все действия далее производятся в каталоге с проектом в консоли или в IDE. 
 
-Перед запуском тестов необходимо [настроить окружение](environment.md)!
+Перед запуском тестов необходимо [настроить окружение](Environment.md)!
 
 ## Внешние источники
 
@@ -201,5 +201,5 @@ allure generate --single-file <путь до каталога с файлами 
 
 ---
 
-- [Назад (Структура проекта)](structure.md)
-- [Далее (Linters)](linters.md)
+- [Назад (Структура проекта)](Structure.md)
+- [Далее (Linters)](Linters.md)

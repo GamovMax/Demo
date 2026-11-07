@@ -18,5 +18,5 @@ pre-commit install
 
 ---
 
-- [Назад (Linters)](linters.md)
-- [Далее (Ссылки на документации)](documentation.md)
+- [Назад (Linters)](Linters.md)
+- [Далее (Ссылки на документации)](Documentation.md)

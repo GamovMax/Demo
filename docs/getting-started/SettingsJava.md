@@ -1,4 +1,4 @@
-# settings.py
+# Settings.java
 
 Для локальной работы нужно создать и заполнить в папке `Autotests` файл **settings.py**,  
 где `settings_example.py` – шаблон такого файла.
@@ -17,5 +17,5 @@
 
 ---
 
-- [Назад (Загрузка проекта)](download_project.md)  
-- [Далее (Настройка окружения)](environment.md)
+- [Назад (Загрузка проекта)](DownloadProject.md)  
+- [Далее (Настройка окружения)](Environment.md)

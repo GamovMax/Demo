@@ -16,5 +16,5 @@ playwright install
 
 ---
 
-- [Назад (settings.py)](settings_py.md)
-- [Далее (Подготовка к запуску тестов)](preparing_to_run_tests.md)
+- [Назад (Settings.java)](SettingsJava.md)
+- [Далее (Подготовка к запуску тестов)](PreparingToRunTests.md)

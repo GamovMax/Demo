@@ -12,5 +12,5 @@ $Env:Path += ";C:\Users\<USERNAME>\Allure\bin"; setx PATH "$Env:Path"
 
 ---
 
-- [Назад (Установка Git)](git.md)
-- [Далее (Форматтер Black)](black.md)
+- [Назад (Установка Git)](Git.md)
+- [Далее (Форматтер Black)](Black.md)

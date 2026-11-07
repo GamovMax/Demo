@@ -7,5 +7,5 @@
 
 ---
 
-- [Назад (Как выставлять версии для изменений в Autotests?)](../getting_started/versions.md)
-- [Далее (Docker)](../guides/docker.md)
+- [Назад (Как выставлять версии для изменений в Autotests?)](Versions.md)
+- [Далее (Docker)](../guides/Docker.md)

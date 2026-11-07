@@ -33,5 +33,5 @@ class TestTestcaseTitle(BaseTest):
 
 ---
 
-- [Назад (Ссылки на документации)](documentation.md)
-- [Далее (Как выставлять версии для изменений в Autotests?)](versions.md)
+- [Назад (Ссылки на документации)](Documentation.md)
+- [Далее (Как выставлять версии для изменений в Autotests?)](Versions.md)

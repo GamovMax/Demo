@@ -10,5 +10,5 @@
 
 ---
 
-- [Назад (Docker)](docker.md)
-- [Далее (Allure)](allure.md)
+- [Назад (Docker)](Docker.md)
+- [Далее (Allure)](Allure.md)
