@@ -20,5 +20,5 @@ docker run --rm lint
 
 ---
 
-- [Назад (Запуск тестов)](RunningTests.md)
+- [Назад (Просмотр отчёта)](Reports.md)
 - [Далее (Pre-commit)](PreCommit.md)

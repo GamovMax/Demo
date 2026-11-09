@@ -10,7 +10,7 @@
   - [Настройка окружения](docs/getting-started/Environment.md)
   - [Подготовка к запуску тестов](docs/getting-started/PreparingToRunTests.md)
   - [Структура проекта](docs/getting-started/Structure.md)
-  - [Запуск тестов](docs/getting-started/RunningTests.md)
+  - [Просмотр отчёта](docs/getting-started/Reports.md)
   - [Linters](docs/getting-started/Linters.md)
   - [Pre-commit](docs/getting-started/PreCommit.md)
   - [Ссылки на документации](docs/getting-started/Documentation.md)
