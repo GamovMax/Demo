@@ -3,6 +3,7 @@ package pages;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class TranslateYandexPage extends BasePage {
 
@@ -17,26 +18,52 @@ public class TranslateYandexPage extends BasePage {
     private final By textEditor = By.cssSelector(".verticalMenuNavItem:nth-child(6)");
 
     public TranslateYandexPage clickTranslateExamples() {
-        Allure.step("Кликнуть по ссылке 'Примеры'", () -> driverChrome.findElement(translationExamples).click());
+        Allure.step("Кликнуть по ссылке 'Примеры'", () -> {
+            WebElement element = driverChrome.findElement(translationExamples);
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+        });
         return this;
     }
 
     public void findTextEditor() {
-        Allure.step("Найти ссылку 'Подборки'", () -> driverChrome.findElement(textEditor));
+        Allure.step("Найти ссылку 'Подборки'", () -> {
+            WebElement element = driverChrome.findElement(textEditor);
+
+            element.isDisplayed();
+            element.isEnabled();
+        });
     }
 
     public TranslateYandexPage findPictures() {
-        Allure.step("Найти ссылку 'Картинки'", () -> driverChrome.findElement(pictures));
+        Allure.step("Найти ссылку 'Картинки'", () -> {
+            WebElement element = driverChrome.findElement(pictures);
+
+            element.isDisplayed();
+            element.isEnabled();
+        });
         return this;
     }
 
     public TranslateYandexPage findWebsiteTranslation() {
-        Allure.step("Найти ссылку 'Сайты'", () -> driverChrome.findElement(websiteTranslation));
+        Allure.step("Найти ссылку 'Сайты'", () -> {
+            WebElement element = driverChrome.findElement(websiteTranslation);
+
+            element.isDisplayed();
+            element.isEnabled();
+        });
         return this;
     }
 
     public TranslateYandexPage findDocuments() {
-        Allure.step("Найти ссылку 'Документы'", () -> driverChrome.findElement(documents));
+        Allure.step("Найти ссылку 'Документы'", () -> {
+            WebElement element = driverChrome.findElement(documents);
+
+            element.isDisplayed();
+            element.isEnabled();
+        });
         return this;
     }
 }
