@@ -33,9 +33,8 @@ public class BaseTest {
     @AfterMethod
     public void tearDown() {
         if (CLEAR_COOKIES_AND_STORAGE) {
-            JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driverChrome;
             driverChrome.manage().deleteAllCookies();
-            javascriptExecutor.executeScript("window.sessionStorage.clear()");
+            ((JavascriptExecutor) driverChrome).executeScript("window.sessionStorage.clear()");
         }
     }
 
