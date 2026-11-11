@@ -59,9 +59,13 @@ public class BasePage {
      * @param attributeName атрибут 'name'
      */
     public void clickOnElementWithAttributeName(String attributeName) {
-        Allure.step("Кликнуть на элемент с атрибутом name = " + attributeName, () -> driverChrome
-                .findElement(By.name(attributeName))
-                .click());
+        Allure.step("Кликнуть на элемент с атрибутом name = " + attributeName, () -> {
+            WebElement element = driverChrome.findElement(By.name(attributeName));
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+        });
     }
 
     /**
@@ -75,7 +79,12 @@ public class BasePage {
         Allure.step("Ввести текст '" + text + "' в элемент с атрибутом name = " +
                 attributeName, () -> {
             clickOnElementWithAttributeName(attributeName);
-            driverChrome.findElement(By.name(attributeName)).sendKeys(text);
+
+            WebElement element = driverChrome.findElement(By.name(attributeName));
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.sendKeys(text);
         });
         return this;
     }
