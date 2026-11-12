@@ -35,8 +35,12 @@ public class AdminPage extends BasePage {
      * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
     public AdminPage checkFirstLevelHeader() {
-        Allure.step("Проверить наличие на странице заголовка первого уровня ('h1')", () -> driverChrome
-                .findElement(By.cssSelector("h1")));
+        Allure.step("Проверить наличие на странице заголовка первого уровня ('h1')", () -> {
+            WebElement element = driverChrome.findElement(By.cssSelector("h1"));
+
+            element.isDisplayed();
+            element.isEnabled();
+        });
         return this;
     }
 }
