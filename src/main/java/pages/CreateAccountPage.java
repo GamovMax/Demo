@@ -3,6 +3,7 @@ package pages;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class CreateAccountPage extends BasePage {
 
@@ -32,14 +33,18 @@ public class CreateAccountPage extends BasePage {
     ) {
         Allure.step("Ввести текст '" + text + "' без/со случайным числом в элемент с атрибутом name = " +
                 attributeName, () -> {
-            driverChrome.findElement(By.name(attributeName)).click();
+            WebElement element = driverChrome.findElement(By.name(attributeName));
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
 
             if (email)
-                driverChrome.findElement(By.name(attributeName)).sendKeys(randomNumber + text);
+                element.sendKeys(randomNumber + text);
             else if (random)
-                driverChrome.findElement(By.name(attributeName)).sendKeys(text + randomNumber);
+                element.sendKeys(text + randomNumber);
             else
-                driverChrome.findElement(By.name(attributeName)).sendKeys(text);
+                element.sendKeys(text);
         });
         return this;
     }
@@ -53,10 +58,21 @@ public class CreateAccountPage extends BasePage {
         String country = "United States";
 
         Allure.step("Ввести текст в input 'Country'", () -> {
-            driverChrome.findElement(accountCountrySelection).click();
-            driverChrome.findElement(accountInputCountry).click();
-            driverChrome.findElement(accountInputCountry).sendKeys(country);
-            driverChrome.findElement(selectResultsOptionHighlighted).click();
+            WebElement element = driverChrome.findElement(accountCountrySelection);
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+
+            element = driverChrome.findElement(accountInputCountry);
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+            element.sendKeys(country);
+
+            element = driverChrome.findElement(selectResultsOptionHighlighted);
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
         });
         return this;
     }
@@ -67,7 +83,13 @@ public class CreateAccountPage extends BasePage {
      * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
     public CreateAccountPage clickLogoutLink() {
-        Allure.step("Кликнуть на ссылку 'Logout'", () -> driverChrome.findElement(LogoutLink).click());
+        Allure.step("Кликнуть на ссылку 'Logout'", () -> {
+            WebElement element = driverChrome.findElement(LogoutLink);
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+        });
         return this;
     }
 }

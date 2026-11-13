@@ -38,9 +38,13 @@ public class BasePage {
      * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
     public BasePage clickOnLinkWithText(String linkText) {
-        Allure.step("Кликнуть на ссылку с текстом '" + linkText + "'", () -> driverChrome
-                .findElement(By.linkText(linkText))
-                .click());
+        Allure.step("Кликнуть на ссылку с текстом '" + linkText + "'", () -> {
+            WebElement element = driverChrome.findElement(By.linkText(linkText));
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+        });
         return this;
     }
 

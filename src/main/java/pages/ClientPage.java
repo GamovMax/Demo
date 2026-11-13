@@ -3,6 +3,7 @@ package pages;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class ClientPage extends BasePage {
 
@@ -19,8 +20,13 @@ public class ClientPage extends BasePage {
     public void checkStickers() {
         String boxMostPopular = "//div[@id='box-most-popular']//li";
         Allure.step("Проверить стикеры в каталоге.", () -> {
-            for (byte i = 1; i <= 5; i++)
-                driverChrome.findElement(By.xpath(boxMostPopular + "[" + i + "]//div[1]/div"));
+            for (byte i = 1; i <= 5; i++) {
+                WebElement element = driverChrome
+                        .findElement(By.xpath(boxMostPopular + "[" + i + "]//div[1]/div"));
+
+                element.isDisplayed();
+                element.isEnabled();
+            }
         });
     }
 
@@ -28,6 +34,12 @@ public class ClientPage extends BasePage {
      * Кликнуть на кнопку 'Create account'.
      */
     public void clickCreateAccount() {
-        Allure.step("Кликнуть на кнопку 'Create account'", () -> driverChrome.findElement(createAccount).click());
+        Allure.step("Кликнуть на кнопку 'Create account'", () -> {
+            WebElement element = driverChrome.findElement(createAccount);
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+        });
     }
 }

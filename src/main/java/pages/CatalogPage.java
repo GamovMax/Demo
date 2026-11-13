@@ -4,6 +4,7 @@ import constants.Names;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
@@ -27,9 +28,13 @@ public class CatalogPage extends BasePage {
      * @return текущий объект страницы 'this' (для цепочки вызовов)
      */
     public CatalogPage clickOnRadiobuttonStatusEnabled() {
-        Allure.step("Кликнуть на радиокнопку 'Enabled'", () -> driverChrome
-                .findElement(catalogRadiobuttonStatusEnabled)
-                .click());
+        Allure.step("Кликнуть на радиокнопку 'Enabled'", () -> {
+            WebElement element = driverChrome.findElement(catalogRadiobuttonStatusEnabled);
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+        });
         return this;
     }
 
@@ -40,8 +45,12 @@ public class CatalogPage extends BasePage {
      */
     public CatalogPage typeRandomName() {
         Allure.step("Ввести рандомное имя", () -> {
-            driverChrome.findElement(catalogInputName).click();
-            driverChrome.findElement(catalogInputName).sendKeys(name);
+            WebElement element = driverChrome.findElement(catalogInputName);
+
+            element.isDisplayed();
+            element.isEnabled();
+            element.click();
+            element.sendKeys(name);
         });
         return this;
     }
