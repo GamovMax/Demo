@@ -1,4 +1,4 @@
-# Version: 1.8.33
+# Version: 1.8.34
 
 ## Добро пожаловать!
 
@@ -25,11 +25,12 @@
   - [Allure](docs/guides/Allure.md)
   - [Форматтер Black](docs/guides/Black.md)
   - [Линтер flake8](docs/guides/Flake8.md)
-  - [Настройки и фишки PyCharm](docs/guides/Pycharm.md)
+  - [Настройки и фишки PyCharm](docs/guides/IntellijIdea.md)
 - [FAQ (Часто задаваемые вопросы)](docs/Faq.md)
 
 ## Требуется автор
 
 Сюда добавляем запросы на гайды. Отсюда же по желанию берем и заполняем.
-- Настройка VsCode
+- Настройка Eclipse
+- Настройка NetBeans
 - Генерация данных

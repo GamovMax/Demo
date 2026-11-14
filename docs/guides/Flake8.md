@@ -17,4 +17,4 @@ flake8
 ---
 
 - [Назад (Форматтер Black)](Black.md)
-- [Далее (Настройки и фишки PyCharm)](Pycharm.md)
+- [Далее (Настройки и фишки IntelliJ IDEA)](IntellijIdea.md)
