@@ -10,5 +10,5 @@
 
 ---
 
-- [Назад (Docker)](Docker.md)
+- [Назад (Соглашения)](../getting-started/Agreements.md)
 - [Далее (Allure)](Allure.md)

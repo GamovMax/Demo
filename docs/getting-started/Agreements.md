@@ -7,4 +7,4 @@
 ---
 
 - [Назад (Как выставлять версии для изменений в Autotests?)](Versions.md)
-- [Далее (Docker)](../guides/Docker.md)
+- [Далее (Установка Git)](../guides/Git.md)

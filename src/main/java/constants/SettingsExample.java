@@ -2,6 +2,9 @@ package constants;
 
 import java.time.Duration;
 
+/**
+ * Константы базовых настроек.
+ */
 public class SettingsExample {
     /**
      * Логин для авторизации.
@@ -17,10 +20,6 @@ public class SettingsExample {
      */
     public static final String URL_CLIENT = "";
     /**
-     * URL админки сервиса.
-     */
-    public static final String URL_ADMIN = "";
-    /**
      * URL страницы с формой авторизации.
      */
     public static final String URL_LOGIN = "";
@@ -29,20 +28,7 @@ public class SettingsExample {
      */
     public static final String URL_TRANSLATE_YANDEX = "";
     /**
-     * URL для swapi.
-     */
-    public static final String STAR_WARS_API = "";
-    /**
-     * URL для jsonplaceholder.
-     */
-    public static final String JSON_PLACE_HOLDER = "";
-
-    /**
      * Длительность неявного ожидания в секундах.
      */
     public static final Duration IMPLICIT_WAIT = Duration.ofSeconds(5);
-    /**
-     * Длительность явного ожидания в секундах.
-     */
-    public static final Duration EXPLICIT_WAIT = Duration.ofSeconds(10);
 }

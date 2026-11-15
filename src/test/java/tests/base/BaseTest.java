@@ -18,8 +18,6 @@ import static common.Config.CLEAR_COOKIES_AND_STORAGE;
 import static common.Config.HOLD_BROWSER_OPEN;
 
 public class BaseTest {
-
-    //    public WebDriver driverChrome = new ChromeDriver();
     protected static WebDriver driverChrome = CommonActions.createDriver();
 
     protected TranslateYandexPage translateYandexPage = new TranslateYandexPage(driverChrome);

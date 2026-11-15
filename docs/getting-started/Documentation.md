@@ -9,5 +9,5 @@
 
 ---
 
-- [Назад (Pre-commit)](PreCommit.md)
+- [Назад (Просмотр отчёта)](Reports.md)
 - [Далее (Написание теста)](WritingTests.md)

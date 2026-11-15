@@ -19,5 +19,5 @@
 
 ---
 
-- [Назад (Подготовка к запуску тестов)](PreparingToRunTests.md)
+- [Назад (Settings.java)](SettingsJava.md)
 - [Далее (Просмотр отчёта)](Reports.md)

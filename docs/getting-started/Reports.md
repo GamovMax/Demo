@@ -37,4 +37,4 @@ allure generate --single-file <путь до каталога с файлами 
 ---
 
 - [Назад (Структура проекта)](Structure.md)
-- [Далее (Linters)](Linters.md)
+- [Далее (Ссылки на документации)](Documentation.md)

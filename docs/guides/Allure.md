@@ -13,4 +13,4 @@ $Env:Path += ";C:\Users\<USERNAME>\Allure\bin"; setx PATH "$Env:Path"
 ---
 
 - [Назад (Установка Git)](Git.md)
-- [Далее (Форматтер Black)](Black.md)
+- [Далее (Настройки и фишки IntelliJ IDEA)](IntellijIdea.md)
