@@ -1,8 +1,11 @@
 package common;
 
+/**
+ * Конфигурационный класс
+ */
 public class Config {
     /**
-     * Очищать файлы cookie браузера после каждого автотеста если значение true – очищать файлы cookie
+     * Очищать файлы cookie браузера после каждого автотеста, если значение true – очищать файлы cookie
      */
     public static final Boolean CLEAR_COOKIES_AND_STORAGE = true;
 
